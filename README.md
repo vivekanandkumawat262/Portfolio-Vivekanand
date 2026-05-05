@@ -1,10 +1,13 @@
 🚀 Portfolio Website (Full Stack)
 
 A modern full-stack developer portfolio showcasing projects, skills, and contact functionality with a live backend API.
-
+```
 🌐 Live Demo
 Frontend (Vercel): https://portfolio-vivekanand-mocha.vercel.app/
 Backend (Render): https://portfolio-vivekanand.onrender.com/
+```
+
+```
 📌 Features
 ✨ Modern responsive UI (React + Tailwind)
 📂 Projects showcase with detailed cards
@@ -15,6 +18,9 @@ Backend (Render): https://portfolio-vivekanand.onrender.com/
 🔐 Secure backend with validation & PostgreSQL
 ⚡ Deployed on Vercel + Render
 🏗️ Tech Stack
+```
+
+
 🔹 Frontend
 React.js
 Tailwind CSS
