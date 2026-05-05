@@ -39,8 +39,12 @@ def create_app(config_override=None) -> Flask:
     configure_logging(app.config["DEBUG"])
     logger = logging.getLogger(__name__)
 
-    # CORS — allow requests from the React dev server (and any configured origin)
-    CORS(app, resources={r"/*": {"origins": app.config["CORS_ORIGINS"]}})
+    # ✅ FIXED CORS (works for local + production)
+    origins = app.config.get("CORS_ORIGINS", "*")
+    if isinstance(origins, str):
+        origins = origins.split(",")
+
+    CORS(app, resources={r"/*": {"origins": origins}})
 
     # SQLAlchemy
     db.init_app(app)
@@ -48,10 +52,13 @@ def create_app(config_override=None) -> Flask:
     # Blueprints
     app.register_blueprint(contact_bp, url_prefix="/api")
 
-    # Create tables if they don't exist yet (handy for first run / SQLite tests)
+    # ✅ Safe DB initialization
     with app.app_context():
-        db.create_all()
-        logger.info("Database tables verified / created.")
+        try:
+            db.create_all()
+            logger.info("Database tables verified / created.")
+        except Exception as e:
+            logger.error(f"Database initialization failed: {e}")
 
     # ── Global error handlers ─────────────────────────────────────────────────
 
@@ -67,11 +74,12 @@ def create_app(config_override=None) -> Flask:
     def internal_error(_):
         return jsonify({"error": "Internal server error."}), 500
 
+    # ✅ SAFE logging (no DB URL leak)
     logger.info(
-        "🚀  Flask app ready — ENV=%s  DB=%s",
+        "🚀 Flask app ready — ENV=%s",
         os.getenv("FLASK_ENV", "development"),
-        app.config["SQLALCHEMY_DATABASE_URI"],
     )
+
     return app
 
 
