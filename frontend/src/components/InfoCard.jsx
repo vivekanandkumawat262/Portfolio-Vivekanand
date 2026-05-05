@@ -49,7 +49,7 @@ const InfoCard = ({ show, setShow }) => {
     setLoading(true);
 
     try {
-      const res = await fetch("https://portfolio-vivekanand-1.onrender.com/api/contact", {
+      const res = await fetch("https://portfolio-vivekanand-2.onrender.com/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
