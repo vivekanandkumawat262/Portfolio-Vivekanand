@@ -20,7 +20,7 @@ Backend (Render): https://portfolio-vivekanand.onrender.com/
 🏗️ Tech Stack
 ```
 
-
+```
 🔹 Frontend
 React.js
 Tailwind CSS
@@ -35,6 +35,9 @@ Flask-CORS
 Vercel (Frontend Hosting)
 Render (Backend Hosting)
 Git & GitHub
+```
+
+```
 📁 Project Structure
 portfolio/
 ├── frontend/
@@ -51,6 +54,11 @@ portfolio/
 │   ├── config.py
 │   ├── requirements.txt
 │   └── ...
+
+```
+
+
+```
 ⚙️ Setup Instructions
 🔹 1. Clone Repository
 git clone https://github.com/YOUR_USERNAME/portfolio.git
@@ -88,6 +96,10 @@ Request Body
   "email": "john@example.com",
   "message": "Hello!"
 }
+
+```
+
+```
 🚀 Deployment
 🔹 Frontend (Vercel)
 Push code to GitHub
@@ -110,7 +122,9 @@ Use uptime monitoring tools to prevent sleep
 📸 Screenshots
 
 Add your portfolio screenshots here
+```
 
+```
 📬 Contact
 📧 Email: vivekanandkumawat261@gmail.com
 💼 LinkedIn: https://www.linkedin.com/in/vivekanand-kumawat-b042802aa
@@ -122,3 +136,4 @@ Feel free to fork this project and improve it.
 📄 License
 
 This project is open-source and available under the MIT License.
+```
