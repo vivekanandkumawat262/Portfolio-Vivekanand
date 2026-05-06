@@ -24,7 +24,7 @@ const projects = [
       'Developed an AI-driven CRM automating the full sales lifecycle using Google Gemini API. Reduced manual effort by 70% with lead classification, email automation, and Stripe payment workflows.',
     tech: ['FastAPI', 'React', 'Gemini API', 'Stripe', 'PostgreSQL'],
     github: 'https://github.com/vivekanandkumawat262',
-    demo: '#',
+    demo: 'https://ai-lead-generation-client-closing-e-gilt.vercel.app',
     color: 'from-purple-500/10 to-violet-500/5',
     accent: '#7B61FF',
     icon: '🚀',
